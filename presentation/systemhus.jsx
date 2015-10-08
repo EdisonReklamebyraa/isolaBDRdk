@@ -10,16 +10,16 @@ import preloader from "../src/utils/preloader";
 
 
 const images = {
-    oversikt: require("./Oversikt.jpg"),
+    oversikt: require("./systemgodkjenning/Systemgodkjenning_2_1.jpg"),
 };
 
 const links = [
-    {x:470, y:490, link:"/komplettdeal/0"},
-    {x:270, y:198, link:"/images/isod"},
-    {x:280, y:490, link:"/images/kilrenne"},
-    {x:1590, y:490, link:"/images/softxtra"},
-    {x:1140, y:180, link:"/images/zink"},
-    {x:1850, y:1020, link:"/nyheter"}
+    {x:1330, y:720, link:"/systemgodkjenning/svillemembran"},
+    {x:884, y:194, link:"/systemgodkjenning/flexwrap"},
+    {x:1330, y:720, link:"/systemgodkjenning/takmansjett"},
+    {x:638, y:413, link:"/systemgodkjenning/rims"},
+    {x:438, y:720, link:"/vindsperrer/0"},
+    {x:1330, y:720, link:"/systemgodkjenning/soft"}   
 ]; 
 
 preloader([images.city, images.kat]);
@@ -30,7 +30,7 @@ class Menu extends React.Component {
     render() {
         return (
            <div className="clickable" onClick={this.clicked.bind(this)} >
-           	
+           	<Link className="backLink" href="/"> </Link>
             <Deck  progress="none" base="/" >
                 <Slide  bgImage={images.oversikt}>                               
                 </Slide>                 

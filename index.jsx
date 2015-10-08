@@ -9,12 +9,20 @@ import BrowserHistory from "react-router/lib/BrowserHistory";
 import Alt from "alt";
 import Flux from "./src/flux/alt";
 
-import Deck from "./presentation/deck";
 import News from "./presentation/news";
 import Gallery from "./presentation/gallery";
 import Menu from "./presentation/menu";
 import Images from "./presentation/images";
+
+import nyheter from "./presentation/nyheter";
 import komplettdeal from "./presentation/komplettdeal";
+import systemhus from "./presentation/systemhus";
+import systemgodkjenning from "./presentation/systemgodkjenning";
+import vindsperrer from "./presentation/vindsperrer";
+import takbelegg from "./presentation/takbelegg";
+import rorosvinduet from "./presentation/rorosvinduet";
+
+
 
 import config from "./presentation/config";
 
@@ -40,10 +48,15 @@ class OuterMostParentComponent extends React.Component {
                 <Route path="/" component={wrap(Menu)} />
                 <Route path="/news/:slide" component={wrap(News)} />
                 <Route path="/gallery/:slide" component={wrap(Gallery)} />
-                <Route path="/:slide" component={wrap(Deck)} />
                 <Route path="/images/:slide" component={wrap(Images)} />
 
-		<Route path="/komplettdeal/:slide" component={wrap(komplettdeal)} />
+                <Route path="/:slide" component={wrap(nyheter)} />
+				<Route path="/komplettdeal/:slide" component={wrap(komplettdeal)} />
+				<Route path="/systemhus/:slide" component={wrap(systemhus)} />
+				<Route path="/systemgodkjenning/:slide" component={wrap(systemgodkjenning)} />
+				<Route path="/vindsperrer/:slide" component={wrap(vindsperrer)} />
+				<Route path="/takbelegg/:slide" component={wrap(takbelegg)} />
+				<Route path="/rorosvinduet/:slide" component={wrap(rorosvinduet)} />
                 
             </Router>
         );
