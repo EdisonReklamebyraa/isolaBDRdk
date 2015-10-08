@@ -24,8 +24,6 @@ import rorosvinduet from "./presentation/rorosvinduet";
 import gronnetak from "./presentation/gronnetak";
 import dampsperrer from "./presentation/dampsperrer";
 
-
-
 import config from "./presentation/config";
 
 require("normalize.css");
