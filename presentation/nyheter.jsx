@@ -16,6 +16,8 @@ const images = {
     komplettdeal: require("./nyheter/komplettdeal_1.jpg"),
     softxtra: require("./nyheter/SoftXtra_1.jpg"),
     systemgodkjennig: require("./nyheter/Systemgodkjenning_1.jpg"),
+    shingel: require("./nyheter/Shingel_1.jpg"),
+    gronnetak: require("./nyheter/Gronnetak_1.jpg"),
     zink: require("./nyheter/Zink_1.jpg")
 };
 
@@ -58,6 +60,8 @@ export default class extends React.Component {
 			    <Slide bgImage={images.softxtra } tickerText="Ny generasjon vindsperre - xtra sterk - xtra monterinsvennlig" />
 			    <Slide bgImage={images.systemgodkjennig } tickerText="Først i landet med SINTEF Byggforsk systemgodkjenning" />
 			    <Slide bgImage={images.zink } tickerText="MONTERINGVENNLIG OG KOMPLETT SORTIMENT" />
+			    <Slide bgImage={images.shingel } tickerText="30 ÅRS GARANTI PÅ PRODUKTET" />
+			    <Slide bgImage={images.gronnetak } tickerText="For fremtidens bymiljø" />
 
                 </Deck>
             </div>
