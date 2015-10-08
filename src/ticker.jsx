@@ -22,8 +22,8 @@ var Ticker = React.createClass({
             txt:slide.props.tickerText,
             timeout: slide.props.slideDuration || this.props.slideDuration
         });
-            
-            this.clearTimout(); 
+        
+        this.clearTimout(); 
         
     },
 
@@ -45,7 +45,7 @@ var Ticker = React.createClass({
 
         node.style.left = screen.width + "px";             
         node.style.transition = "" ;
-        console.log("x");
+
         setTimeout(function(){
             if(width == 0){
                 node.style.transition = "all linear " +(0)+"ms" ; 

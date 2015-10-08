@@ -22,13 +22,15 @@ const images = {
     zink: require("./nyheter/Zink_1.jpg")
 };
 
-preloader([images.city, images.kat]);
+preloader([images.isod]);
 
-export default class extends React.Component {
-
-
+   class News extends React.Component {
     constructor(props) {
-        super(props);               
+        super(props);
+        this.contextTypes = {
+            router: React.PropTypes.object.isRequired
+        };
+
     }  
     
     updatedSlide(i, slide){
@@ -36,37 +38,52 @@ export default class extends React.Component {
     }
 
     nextSlide(){
-       this.refs.deck.next();
+        this.refs.deck.next();
     }    
 
-       
+    
     render() {
 
         return (
-            <div>
-		<Link className="deckLink" href="/"> </Link>
+            <div onClick={this.goto.bind(this)}>
+		            <Link className="deckLink" href="/"> </Link>
 
 
                 <Ticker ref="ticker" nextSlide={this.nextSlide.bind(this)}  slideDuration={5000} />
                 
                 <Deck ref="deck"
-		      transition={[ "fade"]}
+		                  transition={[ "fade"]}
                       progress="none"
                       updatedSlide={this.updatedSlide.bind(this)}                      
-		      transitionDuration={1000}>
+		                  transitionDuration={1000}>
 
-			    <Slide bgImage={images.isod } tickerText="NYTT UNDERLAGSBELEGG MED SELVKLEBENDE OMLEGG" />
-			    <Slide bgImage={images.kilrenne } tickerText="KOMPLETT SYSTEM SOM FORENKLER HÅNDVERKERS HVERDAG" />
-			    <Slide bgImage={images.komplettdeal } tickerText="Nytt og lønnsomt Isola-Tyvek proffkonsept" />
-			    <Slide bgImage={images.softxtra } tickerText="Ny generasjon vindsperre - xtra sterk - xtra monterinsvennlig" />
-			    <Slide bgImage={images.systemgodkjennig } tickerText="Først i landet med SINTEF Byggforsk systemgodkjenning" />
-			    <Slide bgImage={images.zink } tickerText="MONTERINGVENNLIG OG KOMPLETT SORTIMENT" />
-			    <Slide bgImage={images.shingel } tickerText="30 ÅRS GARANTI PÅ PRODUKTET" />
-			    <Slide bgImage={images.gronnetak } tickerText="For fremtidens bymiljø" />
-			    <Slide bgImage={images.dampsperrer } tickerText="Smarte løsninger" />
+			              <Slide bgImage={images.isod } tickerText="NYTT UNDERLAGSBELEGG MED SELVKLEBENDE OMLEGG" />
+			              <Slide bgImage={images.kilrenne } tickerText="KOMPLETT SYSTEM SOM FORENKLER HÅNDVERKERS HVERDAG" />
+			              <Slide bgImage={images.komplettdeal } tickerText="Nytt og lønnsomt Isola-Tyvek proffkonsept" />
+			              <Slide bgImage={images.softxtra } tickerText="Ny generasjon vindsperre - xtra sterk - xtra monterinsvennlig" />
+			              <Slide bgImage={images.systemgodkjennig } tickerText="Først i landet med SINTEF Byggforsk systemgodkjenning" />
+			              <Slide bgImage={images.zink } tickerText="MONTERINGVENNLIG OG KOMPLETT SORTIMENT" />
+			              <Slide bgImage={images.shingel } tickerText="30 ÅRS GARANTI PÅ PRODUKTET" />
+			              <Slide bgImage={images.gronnetak } tickerText="For fremtidens bymiljø" />
+			              <Slide bgImage={images.dampsperrer } tickerText="Smarte løsninger" />
 
                 </Deck>
             </div>
         );
     }
+
+    goto(e){
+        this.context.router.transitionTo("/");
+        e.stopPropagation();
+        e.preventDefault();
+    }
+
 }
+
+News.contextTypes = {
+    router: React.PropTypes.object.isRequired
+};
+
+
+
+module.exports = News;
