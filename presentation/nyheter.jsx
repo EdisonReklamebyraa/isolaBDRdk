@@ -19,6 +19,7 @@ const images = {
     shingel: require("./nyheter/Shingel_1.jpg"),
     gronnetak: require("./nyheter/Gronnetak_1.jpg"),
     dampsperrer: require("./nyheter/Dampsperrer_1.jpg"),
+    rorosvinduet: require("./nyheter/Rorosvinduet_1.jpg"),
     zink: require("./nyheter/Zink_1.jpg")
 };
 
@@ -66,6 +67,7 @@ preloader([images.isod]);
 			              <Slide bgImage={images.shingel } tickerText="30 ÅRS GARANTI PÅ PRODUKTET" />
 			              <Slide bgImage={images.gronnetak } tickerText="For fremtidens bymiljø" />
 			              <Slide bgImage={images.dampsperrer } tickerText="Smarte løsninger" />
+			              <Slide bgImage={images.rorosvinduet } tickerText="Nye aluminiumsbeklede vinduer fra RøroS" />
 
                 </Deck>
             </div>

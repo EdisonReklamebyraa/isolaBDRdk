@@ -19,7 +19,8 @@ const links = [
     {x:670, y:280, link:"/systemgodkjenning/takmansjett"},
     {x:575, y:390, link:"/systemgodkjenning/rims"},
     {x:1153, y:680, link:"/vindsperrer/0"},
-    {x:334, y:622, link:"/systemgodkjenning/tape"}
+    {x:334, y:622, link:"/systemgodkjenning/tape"},
+    {x:755, y:744, link:"/systemgodkjenning/vindu"}
 ]; 
 
 preloader([images.oversikt]);
