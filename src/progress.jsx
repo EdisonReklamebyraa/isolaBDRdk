@@ -80,11 +80,13 @@ class Progress extends Base {
                         
                         <ul className="tabs" >
                             <h3>{this.props.title}</h3>
-                            <li key="prev" onClick={this.click.bind(this,this.props.base + this.next() )}>
-                                <span>Prev</span></li>
 
                             <li key="next" onClick={this.click.bind(this,this.props.base + this.prev() )}>
-                                <span>Next</span></li> 
+                                <span>Forrige</span></li> 
+
+                            <li key="prev" onClick={this.click.bind(this,this.props.base + this.next() )}>
+                                <span>Neste</span></li>
+
                         </ul>
 
                 );

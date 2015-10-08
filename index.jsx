@@ -21,6 +21,8 @@ import systemgodkjenning from "./presentation/systemgodkjenning";
 import vindsperrer from "./presentation/vindsperrer";
 import takbelegg from "./presentation/takbelegg";
 import rorosvinduet from "./presentation/rorosvinduet";
+import gronnetak from "./presentation/gronnetak";
+import dampsperrer from "./presentation/dampsperrer";
 
 
 
@@ -57,6 +59,8 @@ class OuterMostParentComponent extends React.Component {
 				<Route path="/vindsperrer/:slide" component={wrap(vindsperrer)} />
 				<Route path="/takbelegg/:slide" component={wrap(takbelegg)} />
 				<Route path="/rorosvinduet/:slide" component={wrap(rorosvinduet)} />
+				<Route path="/gronnetak/:slide" component={wrap(gronnetak)} />
+				<Route path="/dampsperrer/:slide" component={wrap(dampsperrer)} />
                 
             </Router>
         );

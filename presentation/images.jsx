@@ -14,7 +14,7 @@ const images = {
     kilrenne: require("./kilrenne/Kilrenne_2.jpg"),
     softxtra: require("./softxtra/SoftXtra_2.jpg"),
     zink: require("./zink/Zink_2.jpg"),
-    shingel: require("./zink/Shingel_2.jpg")
+    shingel: require("./shingel/Shingel_2.jpg")
 };
 
 preloader([images.isod, images.kilrenne, images.softxtra, images.zink]);

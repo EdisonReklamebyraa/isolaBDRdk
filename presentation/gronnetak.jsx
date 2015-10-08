@@ -10,13 +10,13 @@ import preloader from "../src/utils/preloader";
 import Interactive from "./interactive";
 
 const images = {
-    gronnetak1: require("./city.jpg"),
-    gronnetak1: require("./city.jpg"),
-    gronnetak1: require("./city.jpg"),
-    logo: require("./formidable-logo.svg")
+    gronnetak1: require("./gronnetak/gronnetak_2_1.jpg"),
+    gronnetak2: require("./gronnetak/gronnetak_2_2.jpg"),
+    gronnetak3: require("./gronnetak/gronnetak_2_3.jpg"),
+    gronnetak4: require("./gronnetak/gronnetak_2_4.jpg")
 };
 
-preloader([images.city, images.kat]);
+preloader([images.gronnetak1, images.gronnetak2, images.gronnetak3, images.gronnetak4]);
 
 
 class Gallery extends React.Component {
@@ -27,29 +27,11 @@ class Gallery extends React.Component {
             <div>
                 <Link className="deckLink" href="/"> </Link>
 
-                <Deck transition={[ "fade"]} title="How awesome!" progress="gallery" base="/gallery/" transitionDuration={800}>
-                    <Slide  bgColor="primary"
-                            tab="One">         
-                        <Heading size={1} fit caps>
-                            NEWS
-                        </Heading>
-                    </Slide>
-                    <Slide   bgColor="black"
-                             tab="Two"
-                             notes="You can even put notes on your slide. How awesome is that?">
-                        <Image src={images.kat} margin="0px auto 40px" height="293px"/>
-                        <Heading size={1} fit textColor="primary" textFont="secondary">
-                            what what?
-                        </Heading>
-                    </Slide>
-                    <Slide  bgColor="#FF00FF"
-                            tab="Three"
-                            id="xxx">
-                        <video width="100%" height="100%" autoplay  controls>
-                            <source src="/presentation/Powertekk_mont_med_lables.mp4" type="video/mp4" />
-                        </video>
-                       
-                    </Slide>
+                <Deck transition={[ "fade"]} title="Isola Grønne tak" progress="gallery" base="/gronnetak/" transitionDuration={800}>
+                    <Slide  bgImage={images.gronnetak1} tab="1"></Slide>
+                    <Slide  bgImage={images.gronnetak2} tab="2"></Slide>
+                    <Slide  bgImage={images.gronnetak3} tab="3"></Slide>
+                    <Slide  bgImage={images.gronnetak4} tab="4"></Slide>
                 </Deck>
             </div>
         );
