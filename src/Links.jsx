@@ -13,21 +13,24 @@ class Links extends Base {
     }
 
     goto(e){
-        this.context.router.transitionTo(this.getClosestLink(e.clientX, e.clientY).link);       
+        this.context.router.transitionTo(this.getClosestLink(e.clientX, e.clientY).link);
+
         e.stopPropagation();
         e.preventDefault();
     }
 
     getClosestLink(x,y){
-        var closest = this.props.links.reduce(function(min, p) {
 
-            if (d(x,y,p.x,p.y) < min.d){
-                min.point = p;
+        var closest = this.props.links[0];
+        var dist = d(x,y,this.props.links[0])
 
+        for(var i = 1; i < this.props.links.length;i++){
+            if(d(x,y,this.props.links[i]) < dist){
+                closest = this.props.links[i];
+                dist = d(x,y,this.props.links[i])
             }
-            return min;
-        }, {point: this.props.links[0], d:d(x,y,this.props.links[0].x,this.props.links[0].y)}).point;
-
+            
+        }
         return closest;
 
     }
@@ -35,8 +38,8 @@ class Links extends Base {
 
 
 
-function d(x1,y1,x2,y2) {
-    return Math.sqrt( Math.pow((x1-x2), 2) + Math.pow((y1-y2), 2) );
+function d(x,y,p) {
+    return Math.sqrt( Math.pow((x-p.x), 2) + Math.pow((y-p.y), 2) );
 }
 
 Links.propTypes = { 

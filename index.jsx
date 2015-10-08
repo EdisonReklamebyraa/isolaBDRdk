@@ -14,6 +14,7 @@ import News from "./presentation/news";
 import Gallery from "./presentation/gallery";
 import Menu from "./presentation/menu";
 import Images from "./presentation/images";
+import komplettdeal from "./presentation/komplettdeal";
 
 import config from "./presentation/config";
 
@@ -41,6 +42,8 @@ class OuterMostParentComponent extends React.Component {
                 <Route path="/gallery/:slide" component={wrap(Gallery)} />
                 <Route path="/:slide" component={wrap(Deck)} />
                 <Route path="/images/:slide" component={wrap(Images)} />
+
+		<Route path="/komplettdeal/:slide" component={wrap(komplettdeal)} />
                 
             </Router>
         );
