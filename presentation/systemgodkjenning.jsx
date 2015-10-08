@@ -16,10 +16,10 @@ const images = {
     takmansjett: require("./systemgodkjenning/Systemgodkjenning_2_4_takmansjett.jpg"),
     rims: require("./systemgodkjenning/Systemgodkjenning_2_5_rims.jpg"),
     soft: require("./systemgodkjenning/Systemgodkjenning_2_6_1_soft.jpg"),
-    uv: require("./systemgodkjenning/Systemgodkjenning_2_6_2_UV.jpg"),
+    tape: require("./systemgodkjenning/Systemgodkjenning_2_5_tape.jpg")
 };
 
-preloader([images.svillemembran, images.flexwrap, images.takmansjett, images.rims, images.soft, images.uv]);
+preloader([images.svillemembran, images.flexwrap, images.takmansjett, images.rims, images.soft, images.tape]);
 
 
 class Images extends React.Component {
@@ -33,9 +33,10 @@ class Images extends React.Component {
                 <Deck transition={[ "slide"]} progress="none" base="/systemgodkjenning/" transitionDuration={800}>
 				    <Slide bgImage={images.svillemembran} id="svillemembran"/>
 				    <Slide bgImage={images.flexwrap} id="flexwrap" />
+				    <Slide bgImage={images.takmansjett} id="takmansjett" />
 				    <Slide bgImage={images.rims} id="rims" />
 				    <Slide bgImage={images.soft} id="soft" />
-				    <Slide bgImage={images.soft} id="uv" />
+				    <Slide bgImage={images.tape} id="tape" />
 
                 </Deck>
             </div>
