@@ -10,12 +10,13 @@ import preloader from "../src/utils/preloader";
 import Interactive from "./interactive";
 
 const images = {
-    city: require("./city.jpg"),
-    kat: require("./kat.png"),
-    logo: require("./formidable-logo.svg")
+    isod: require("./isod/IsoD_2.jpg"),
+    kilrenne: require("./kilrenne/Kilrenne_2.jpg"),
+    softxtra: require("./softxtra/SoftXtra_2.jpg"),
+    zink: require("./zink/Zink_2.jpg")
 };
 
-preloader([images.city, images.kat]);
+preloader([images.isod, images.kilrenne, images.softxtra, images.zink]);
 
 
 class Images extends React.Component {
@@ -27,9 +28,10 @@ class Images extends React.Component {
                 <Link className="backLink" href="/"> </Link>
                 
                 <Deck transition={[ "slide"]} progress="none" base="/images/" transitionDuration={800}>
-                    <Slide   bgImage={images.city} />                                 
-                    <Slide   bgImage={images.kat} />
-                    <Slide   bgImage={images.logo} />                                                     
+		    <Slide bgImage={images.isod} id="isod"/>
+		    <Slide bgImage={images.kilrenne} id="kilrenne" />
+		    <Slide bgImage={images.softxtra} id="softxtra" />
+		    <Slide bgImage={images.zink} id="zink" />
 
                 </Deck>
             </div>

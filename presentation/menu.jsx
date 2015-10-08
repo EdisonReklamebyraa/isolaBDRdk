@@ -14,9 +14,15 @@ const images = {
 };
 
 const links = [
-    {x:55, y:55, link:"/news/0"},
-    {x:500, y:500, link:"/news/1"},
-    {x:1000, y:1000, link:"/1"}
+    {x:470, y:490, link:"/komplettdeal/0"},
+/* ISO-d */
+    {x:270, y:198, link:"/images/0"},
+/* kilrenne */
+    {x:280, y:490, link:"/images/1"},
+/* softxtra */
+    {x:1590, y:490, link:"/images/2"},
+/* zink */
+    {x:1140, y:180, link:"/images/3"}
 ]; 
 
 preloader([images.city, images.kat]);
