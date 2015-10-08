@@ -34,7 +34,7 @@ class Deck extends React.Component {
         };
     }
     componentDidMount() {
-                debugger;
+
         const slide = this._getSlideIndex();
         this.setState({
             lastSlide: slide
