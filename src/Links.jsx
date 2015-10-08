@@ -6,28 +6,30 @@ import Radium from "radium";
 class Links extends Base {
     render() {
         return (
-            <div {...this.props}  onClick={this.goto.bind(this)}>
+            <div key="Links" {...this.props}  onClick={this.goto.bind(this)}>
                 {this.props.children}
             </div>
         );
     }
 
     goto(e){
-        this.context.router.transitionTo(this.getClosestLink(e.clientX, e.clientY).link);
-
+        var p = getRelativePoint(); 
+        this.context.router.transitionTo(this.getClosestLink(getRelativePoint(e.clientX, e.clientY)).link);
         e.stopPropagation();
         e.preventDefault();
     }
 
-    getClosestLink(x,y){
-
+    getClosestLink(o){
+        
         var closest = this.props.links[0];
-        var dist = d(x,y,this.props.links[0])
+        var dist = d(o,this.props.links[0])
 
+            console.log("Relative XY", o); 
+            
         for(var i = 1; i < this.props.links.length;i++){
-            if(d(x,y,this.props.links[i]) < dist){
+            if(d(o,this.props.links[i]) < dist){
                 closest = this.props.links[i];
-                dist = d(x,y,this.props.links[i])
+                dist = d(o,this.props.links[i])
             }
             
         }
@@ -37,13 +39,20 @@ class Links extends Base {
 }
 
 
+function getRelativePoint(x,y){
+    return {
+        x: (x/screen.width)*1920,
+        y: (y/screen.height)*1080
+    }   
+}
 
-function d(x,y,p) {
-    return Math.sqrt( Math.pow((x-p.x), 2) + Math.pow((y-p.y), 2) );
+
+function d(o,p) {
+    return Math.sqrt( Math.pow((o.x-p.x), 2) + Math.pow((o.y-p.y), 2) );
 }
 
 Links.propTypes = { 
-    links: React.PropTypes.object
+    links: React.PropTypes.array
 };
 
 Links.contextTypes = {
