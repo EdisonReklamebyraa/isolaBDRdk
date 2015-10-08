@@ -45,14 +45,11 @@ class Deck extends React.Component {
         this._updateTicker();
 
     }
+    
     componentWillUnmount() {
         this._detachEvents();
 
-    }
-
-  
-    
-
+    }    
     _updateTicker(){
         const slide = this._getSlideIndex();
         const child = this._getChild(slide);

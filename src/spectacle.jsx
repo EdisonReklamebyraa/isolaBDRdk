@@ -10,6 +10,7 @@ import Heading from "./heading";
 import Image from "./image";
 import Layout from "./layout";
 import Link from "./link";
+import Links from "./links";
 import ListItem from "./list-item";
 import List from "./list";
 import Quote from "./quote";
@@ -31,6 +32,7 @@ export {
     Image,
     Layout,
     Link,
+    Links,
     ListItem,
     List,
     Quote,
