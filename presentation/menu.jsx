@@ -42,6 +42,7 @@ class Menu extends React.Component {
     render() {
         return (
             <Links className="clickable" links={links} >
+            <Link className="backLink" href="/0"> </Link>
                 <Deck  progress="none" base="/" >
                     <Slide  bgImage={images.oversikt}>                               
                     </Slide>                 
