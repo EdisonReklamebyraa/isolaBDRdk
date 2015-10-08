@@ -11,7 +11,7 @@ import Interactive from "./interactive";
 
 const images = {
     city: require("./city.jpg"),
-    kat: require("./kat.png"),
+    kat: require("./kat.png"),    
     logo: require("./formidable-logo.svg")
 };
 
@@ -42,10 +42,11 @@ class Gallery extends React.Component {
                         </Heading>
                     </Slide>
                     <Slide  bgColor="#FF00FF"
-                            tab="Three">         
-                        <Heading size={1} fit caps>
-                            NEWS
-                        </Heading>
+                            tab="Three">
+                        <video width="100%" height="100%" autoplay  controls>
+                            <source src="/presentation/Powertekk_mont_med_lables.mp4" type="video/mp4" />
+                        </video>
+                       
                     </Slide>
                 </Deck>
             </div>

@@ -68,6 +68,7 @@ html, body {
     white-space: nowrap;
     padding-right: 100%;
     position: absolute;
+    text-transform: capitalize;
 }
 
 .clickable{
