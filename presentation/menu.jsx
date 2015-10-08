@@ -14,15 +14,27 @@ const images = {
 };
 
 const links = [
-    {x:470, y:490, link:"/komplettdeal/0"},
-    {x:270, y:198, link:"/images/isod"},
-    {x:280, y:490, link:"/images/kilrenne"},
-    {x:1590, y:490, link:"/images/softxtra"},
-    {x:1140, y:180, link:"/images/zink"},
-    {x:1850, y:1020, link:"/nyheter"}
+    {x:270, y:160, link:"/images/isod"},
+    {x:270, y:490, link:"/images/kilrenne"},
+    {x:270, y:840, link:"/images/tape"},
+
+    {x:710, y:160, link:"/images/shingel"},
+    {x:710, y:490, link:"/komplettdeal/0"},
+    {x:710, y:840, link:"/takbelegg/0"},
+
+    {x:1160, y:160, link:"/images/zink"},
+    {x:1160, y:490, link:"/systemhus/0"},
+    {x:1160, y:840, link:"/gronnetak/0"},
+
+
+    {x:1600, y:160, link:"/dampsperrer/0"},
+    {x:1600, y:490, link:"/images/softxtra"},
+    {x:1600, y:840, link:"/rorosvinduet/0"},
+
+
 ]; 
 
-preloader([images.city, images.kat]);
+preloader([images.oversikt]);
 
 
 class Menu extends React.Component {
@@ -30,6 +42,7 @@ class Menu extends React.Component {
     render() {
         return (
             <Links className="clickable" links={links} >
+            <Link className="backLink" href="/0"> </Link>
                 <Deck  progress="none" base="/" >
                     <Slide  bgImage={images.oversikt}>                               
                     </Slide>                 

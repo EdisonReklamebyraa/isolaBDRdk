@@ -23,7 +23,7 @@ class Master extends React.Component {
     render() {
 	return (
 	    <div>
-		<Link className="deckLink" href="/systemhus/0/"> </Link>
+		<Link className="deckLink" href="/"> </Link>
 
 		<Deck transition={[ "fade"]} progress="tabs" base="/dampsperrer/" transitionDuration={800}>
 		    <Slide  bgImage={images.smart} tab="Isola AirGuard® Smart"></Slide>

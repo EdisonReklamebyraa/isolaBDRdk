@@ -17,7 +17,7 @@ const images = {
     shingel: require("./shingel/Shingel_2.jpg")
 };
 
-preloader([images.isod, images.kilrenne, images.softxtra, images.zink]);
+preloader([images.isod, images.kilrenne, images.softxtra, images.zink, images.shingel]);
 
 
 class Images extends React.Component {
