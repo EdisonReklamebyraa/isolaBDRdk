@@ -5,8 +5,7 @@ var config = require("./presentation/config");
 var webpackConfig = getConfig({
   in: "./index.jsx",
   out: "dist",
-  clearBeforeBuild: true,
-  html: config.html
+  clearBeforeBuild: true
 });
 
 webpackConfig.module.loaders[0] = {

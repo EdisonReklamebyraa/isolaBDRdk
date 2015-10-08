@@ -16,24 +16,26 @@ import Quote from "./quote";
 import S from "./s";
 import Slide from "./slide";
 import Text from "./text";
+import Ticker from "./ticker";
 
 export {
-  Appear,
-  BlockQuote,
-  Cite,
-  CodePane,
-  Code,
-  Deck,
-  Fill,
-  Fit,
-  Heading,
-  Image,
-  Layout,
-  Link,
-  ListItem,
-  List,
-  Quote,
-  S,
-  Slide,
-  Text
+    Appear,
+    BlockQuote,
+    Cite,
+    CodePane,
+    Code,
+    Deck,
+    Fill,
+    Fit,
+    Heading,
+    Image,
+    Layout,
+    Link,
+    ListItem,
+    List,
+    Quote,
+    S,
+    Slide,
+    Text,
+    Ticker
 };

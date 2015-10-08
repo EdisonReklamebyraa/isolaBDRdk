@@ -26,8 +26,9 @@ const context = function context(Component, params) {
       }
       let slide = 0;
       if (this.props.params && "slide" in this.props.params) {
-        slide = this.props.params.slide;
+        slide = this.props.params.slide * 1;
       }
+
       return {
         styles,
         flux: params.flux,

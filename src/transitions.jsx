@@ -48,9 +48,11 @@ export default {
     }
   },
   componentWillEnter(cb) {
-    const direction = this.props.slideIndex > this.props.lastSlide;
+      const direction =  (this.props.slideIndex > this.props.lastSlide || ( this.props.slideIndex === 0 && this.props.lastSlide != 1))
+              &&  !(this.props.lastSlide === 0 && this.props.slideIndex  != 1) ;
 
-    this.setState({
+      
+    this.setState({ 
       z: 1
     }, () => {
 
@@ -74,7 +76,7 @@ export default {
 
       if (this.props.transition.indexOf("slide") !== -1) {
         this.tweenState("left", {
-          easing: tweenState.easingTypes.easeOutQuad,
+          easing: tweenState.easingTypes.easeInOutQuad,
           duration: this.props.transitionDuration,
           beginValue: direction ? 100 : -100,
           endValue: 0
@@ -123,7 +125,7 @@ export default {
   },
   componentWillLeave(cb) {
     const slide = parseInt(this.context.router.state.params.slide) || 0;
-    const direction = this.props.slideIndex > slide;
+    const direction =  (this.props.slideIndex > slide && !( slide === 0 && this.props.lastSlide != 1) || (this.props.lastSlide === 0 && slide != 1)) ;
 
     this.setState({
       z: ""
@@ -147,7 +149,7 @@ export default {
 
       if (this.props.transition.indexOf("slide") !== -1) {
         this.tweenState("left", {
-          easing: tweenState.easingTypes.easeOutQuad,
+          easing: tweenState.easingTypes.easeInQ,
           duration: this.props.transitionDuration,
           endValue: direction ? 100 : -100
         });
@@ -155,7 +157,7 @@ export default {
 
       if (this.props.transition.indexOf("spin") !== -1) {
         this.tweenState("x", {
-          easing: tweenState.easingTypes.easeOutQuad,
+          easing: tweenState.easingTypes.easeInOutQuad,
           duration: this.props.transitionDuration,
           endValue: direction ? 90 : -90
         });
@@ -171,6 +173,8 @@ export default {
     let styles = {
       zIndex: this.state.z
     };
+
+
     if (this.props.transition.indexOf("fade") !== -1) {
       styles = assign(styles, {
         opacity: this.getTweeningValue("opacity")
