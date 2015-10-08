@@ -25,8 +25,9 @@ const context = function context(Component, params) {
         styles = params.styles;
       }
       let slide = 0;
-      if (this.props.params && "slide" in this.props.params) {
-        slide = this.props.params.slide * 1;
+        if (this.props.params && "slide" in this.props.params) {
+            var s = this.props.params.slide * 1;            
+            slide = isNaN(s)?this.props.params.slide:s;
       }
 
       return {

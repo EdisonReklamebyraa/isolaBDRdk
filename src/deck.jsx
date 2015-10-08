@@ -34,6 +34,7 @@ class Deck extends React.Component {
         };
     }
     componentDidMount() {
+                debugger;
         const slide = this._getSlideIndex();
         this.setState({
             lastSlide: slide
@@ -312,6 +313,7 @@ class Deck extends React.Component {
     
     _getSlideIndex() {
         let index = 0;
+        
         if (!parseInt(this.context.slide)) {
             if(this.props.children.forEach)
                 this.props.children.forEach((slide, i) => {
