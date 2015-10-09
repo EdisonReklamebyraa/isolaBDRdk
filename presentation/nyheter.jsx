@@ -59,14 +59,14 @@ preloader([images.isod, images.kilrenne ,images.komplettdeal, images.softxtra, i
                       updatedSlide={this.updatedSlide.bind(this)}                      
 		                  transitionDuration={1000}>
 
-			              <Slide bgImage={images.isod } tickerText="NYTT UNDERLAGSBELEGG MED SELVKLEBENDE OMLEGG" />
-			              <Slide bgImage={images.kilrenne } tickerText="KOMPLETT SYSTEM SOM FORENKLER HÅNDVERKERS HVERDAG" />
+			              <Slide bgImage={images.isod } tickerText="Nytt underlagsbelegg med selvklebende omlegg" />
+			              <Slide bgImage={images.kilrenne } tickerText="Komplett system som forenkler håndverkers hverdag" />
 			              <Slide bgImage={images.komplettdeal } tickerText="Nytt og lønnsomt Isola-Tyvek proffkonsept" />
 			              <Slide bgImage={images.tape } tickerText="Ny klebesterk og fleksibel vindsperre tape til forsegling av detaljer" />
 			              <Slide bgImage={images.softxtra } tickerText="Ny generasjon vindsperre - xtra sterk - xtra monterinsvennlig" />
 			              <Slide bgImage={images.systemgodkjennig } tickerText="Først i landet med SINTEF Byggforsk systemgodkjenning" />
-			              <Slide bgImage={images.zink } tickerText="MONTERINGVENNLIG OG KOMPLETT SORTIMENT" />
-			              <Slide bgImage={images.shingel } tickerText="30 ÅRS GARANTI PÅ PRODUKTET" />
+			              <Slide bgImage={images.zink } tickerText="Monteringvennlig og komplett sortiment" />
+			              <Slide bgImage={images.shingel } tickerText="30 års garanti på produktet" />
 			              <Slide bgImage={images.gronnetak } tickerText="For fremtidens bymiljø" />
 			              <Slide bgImage={images.dampsperrer } tickerText="Smarte løsninger" />
 			              <Slide bgImage={images.rorosvinduet } tickerText="Nye aluminiumsbeklede vinduer fra Røros" />
