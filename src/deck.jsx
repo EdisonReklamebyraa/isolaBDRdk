@@ -84,6 +84,7 @@ class Deck extends React.Component {
         }
              
     }
+    
     _getBase(){
         return this.props.base || "/"; 
 
