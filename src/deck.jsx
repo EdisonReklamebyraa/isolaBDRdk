@@ -53,7 +53,7 @@ class Deck extends React.Component {
     _updateTicker(){
         const slide = this._getSlideIndex();
         const child = this._getChild(slide);
-        
+
         if(this.props.updatedSlide)
             this.props.updatedSlide(slide, child);
     }
