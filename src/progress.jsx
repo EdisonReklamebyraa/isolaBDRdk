@@ -30,6 +30,7 @@ class Progress extends Base {
     render() {
         let style = this.context.styles.progress;
         let markup;
+
         switch (this.props.type) {
             case "none":
                 return false;

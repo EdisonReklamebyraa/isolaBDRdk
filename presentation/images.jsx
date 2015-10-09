@@ -30,7 +30,7 @@ class Images extends React.Component {
                 <Link className="backLink" href="/"> </Link>
                 
 
-                <Deck base="/images/">
+                <Deck progress="none" base="/images/">
 				    <Slide bgImage={images.isod} id="isod"/>
 				    <Slide bgImage={images.kilrenne} id="kilrenne" />
 				    <Slide bgImage={images.softxtra} id="softxtra" />

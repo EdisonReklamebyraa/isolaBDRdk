@@ -14,7 +14,7 @@ const images = {
     produkter: require("./zink/Zink_2_2.jpg")
 };
 
-preloader([images.takbelegg, images.mestertekk, images.dobbeltlag, images.membraner, images.listetekking]);
+preloader([images.zink, images.produkter]);
 
 
 class Master extends React.Component {

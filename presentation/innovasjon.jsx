@@ -1,7 +1,7 @@
 import React from "react/addons";
 
 import {
-    Appear, BlockQuote, Cite, CodePane, Deck, Fill,
+    Appear, AutoPlay, BlockQuote, Cite, CodePane, Deck, Fill,
     Heading, Image, Layout, Link, ListItem, List, Quote, Slide, Text, Ticker
 } from "../src/spectacle";
 
@@ -29,7 +29,7 @@ const images = {
 
 preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, images.s7, images.s8, images.s9, images.s10, images.s11, images.s12, images.s13]);
 
-   class News extends React.Component {
+class Innovasjon extends React.Component {
     constructor(props) {
         super(props);
         this.contextTypes = {
@@ -39,7 +39,7 @@ preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, ima
     }  
     
     updatedSlide(i, slide){
-        this.refs.ticker.updateSlide(slide);            
+        this.refs.autoPlay.startTimer(slide);            
     }
 
     nextSlide(){
@@ -50,14 +50,12 @@ preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, ima
     render() {
 
         return (
-            <div onClick={this.goto.bind(this)}>
-		            
-
-                
-                <Deck ref="ticker" base="/innovasjon/" 
+            <div>
+		            <AutoPlay ref="autoPlay" slideDuration={10000} nextSlide={this.nextSlide.bind(this)}  />
+                <Deck ref="deck" base="/innovasjon/" 
 		                  transition={[ "fade"]}
                       progress="none"
-                                            
+                       updatedSlide={this.updatedSlide.bind(this)}                      
 		                  transitionDuration={1000}>
 
 			              <Slide bgImage={images.S1 }/>
@@ -78,19 +76,12 @@ preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, ima
             </div>
         );
     }
-
-    goto(e){
-        this.context.router.transitionTo("/");
-        e.stopPropagation();
-        e.preventDefault();
-    }
-
 }
 
-News.contextTypes = {
+Innovasjon.contextTypes = {
     router: React.PropTypes.object.isRequired
 };
 
 
 
-module.exports = News;
+module.exports = Innovasjon;

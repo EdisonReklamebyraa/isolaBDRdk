@@ -1,4 +1,5 @@
 import Appear from "./appear";
+import AutoPlay from "./autoplay";
 import BlockQuote from "./block-quote";
 import Cite from "./cite";
 import CodePane from "./code-pane";
@@ -21,6 +22,7 @@ import Ticker from "./ticker";
 
 export {
     Appear,
+    AutoPlay,
     BlockQuote,
     Cite,
     CodePane,
