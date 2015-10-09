@@ -14,7 +14,7 @@ const context = function context(Component, params) {
       overview: React.PropTypes.bool,
       export: React.PropTypes.bool,
       print: React.PropTypes.bool,
-      slide: React.PropTypes.number
+      slide: React.PropTypes.any 
     },
     getChildContext() {
       let styles = {};
@@ -45,6 +45,7 @@ const context = function context(Component, params) {
       return <Component {...this.props} />;
     }
   });
+    
   return wrapper;
 };
 

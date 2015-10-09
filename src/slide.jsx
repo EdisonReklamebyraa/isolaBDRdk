@@ -18,7 +18,7 @@ const Slide = React.createClass({
   },
   propTypes: {
     align: React.PropTypes.string,
-    hash: React.PropTypes.number,
+    hash: React.PropTypes.any,
     presenterStyle: React.PropTypes.object,
     children: React.PropTypes.node,
     notes: React.PropTypes.string,

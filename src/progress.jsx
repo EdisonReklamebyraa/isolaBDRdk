@@ -162,7 +162,7 @@ class Progress extends Base {
 }
 
 Progress.propTypes = {
-    items: React.PropTypes.array,
+    items: React.PropTypes.any,
     currentSlide: React.PropTypes.number,
     type: React.PropTypes.oneOf(["pacman", "bar", "number","tabs","gallery", "none"])
 };
