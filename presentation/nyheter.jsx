@@ -22,7 +22,17 @@ const images = {
     zink: require("./nyheter/Zink_1.jpg")
 };
 
-preloader([images.isod]);
+preloader([images.isod,
+           images.kilrenne,
+           images.komplettdeal,
+           images.softxtra,
+           images.systemgodkjennig,
+           images.shingel,
+           images.gronnetak,
+           images.dampsperrer,
+           images.zink
+
+]);
 
    class News extends React.Component {
     constructor(props) {

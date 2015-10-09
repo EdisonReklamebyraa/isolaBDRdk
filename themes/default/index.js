@@ -1,6 +1,6 @@
 /*eslint-disable object-shorthand*/
 const colors = {
-    primary: "#cb2841",
+    primary: "#FFFFFF",
     secondary: "#464646",
     tertiary: "#c9c9ca"
 };
