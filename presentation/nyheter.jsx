@@ -21,7 +21,7 @@ const images = {
     dampsperrer: require("./nyheter/Dampsperrer_1.jpg"),
     rorosvinduet: require("./nyheter/Rorosvinduet_1.jpg"),
     zink: require("./nyheter/Zink_1.jpg"),
-    tape: require("./tape/tape_1.jpg")
+    tape: require("./nyheter/tape_1.jpg")
 };
 
  
@@ -62,7 +62,7 @@ preloader([images.isod, images.kilrenne ,images.komplettdeal, images.softxtra, i
 			              <Slide bgImage={images.isod } tickerText="NYTT UNDERLAGSBELEGG MED SELVKLEBENDE OMLEGG" />
 			              <Slide bgImage={images.kilrenne } tickerText="KOMPLETT SYSTEM SOM FORENKLER HÅNDVERKERS HVERDAG" />
 			              <Slide bgImage={images.komplettdeal } tickerText="Nytt og lønnsomt Isola-Tyvek proffkonsept" />
-			              <Slide bgImage={images.tape } tickerText="Xtra sterk, monteringsvennlig, fuktsikker, robust og aldringsbestandig." />
+			              <Slide bgImage={images.tape } tickerText="Ny klebesterk og fleksibel vindsperre tape til forsegling av detaljer" />
 			              <Slide bgImage={images.softxtra } tickerText="Ny generasjon vindsperre - xtra sterk - xtra monterinsvennlig" />
 			              <Slide bgImage={images.systemgodkjennig } tickerText="Først i landet med SINTEF Byggforsk systemgodkjenning" />
 			              <Slide bgImage={images.zink } tickerText="MONTERINGVENNLIG OG KOMPLETT SORTIMENT" />
