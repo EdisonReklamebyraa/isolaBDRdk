@@ -22,6 +22,7 @@ import rorosvinduet from "./presentation/rorosvinduet";
 import gronnetak from "./presentation/gronnetak";
 import dampsperrer from "./presentation/dampsperrer";
 import zink from "./presentation/zink";
+import kilrenne from "./presentation/kilrenne";
 
 import innovasjon from "./presentation/innovasjon";
 
@@ -61,6 +62,7 @@ class OuterMostParentComponent extends React.Component {
 		        <Route path="/gronnetak/:slide" component={wrap(gronnetak)} />
 		        <Route path="/dampsperrer/:slide" component={wrap(dampsperrer)} />
 		        <Route path="/zink/:slide" component={wrap(zink)} />
+		        <Route path="/kilrenne/:slide" component={wrap(kilrenne)} />
 		        
 		        <Route path="/innovasjon/:slide" component={wrap(innovasjon)} />
                 
