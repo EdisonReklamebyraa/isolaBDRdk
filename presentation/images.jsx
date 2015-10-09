@@ -14,7 +14,8 @@ const images = {
     kilrenne: require("./kilrenne/Kilrenne_2.jpg"),
     softxtra: require("./softxtra/SoftXtra_2.jpg"),
     zink: require("./zink/Zink_2.jpg"),
-    shingel: require("./shingel/Shingel_2.jpg")
+    shingel: require("./shingel/Shingel_2.jpg"),
+    tape: require("./tape/tape_2.jpg")
 };
 
 preloader([images.isod, images.kilrenne, images.softxtra, images.zink, images.shingel]);
@@ -28,12 +29,15 @@ class Images extends React.Component {
             <div>
                 <Link className="backLink" href="/"> </Link>
                 
-                <Deck  progress="none" base="/images/" transitionDuration={800}>
-				            <Slide bgImage={images.isod} id="isod"/>
-				            <Slide bgImage={images.kilrenne} id="kilrenne" />
-				            <Slide bgImage={images.softxtra} id="softxtra" />
-				            <Slide bgImage={images.zink} id="zink" />
-				            <Slide bgImage={images.shingel} id="shingel" />
+
+                <Deck base="/images/">
+				    <Slide bgImage={images.isod} id="isod"/>
+				    <Slide bgImage={images.kilrenne} id="kilrenne" />
+				    <Slide bgImage={images.softxtra} id="softxtra" />
+				    <Slide bgImage={images.zink} id="zink" />
+				    <Slide bgImage={images.shingel} id="shingel" />
+				    <Slide bgImage={images.tape} id="tape" />
+
 
                 </Deck>
             </div>

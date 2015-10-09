@@ -11,10 +11,11 @@ import Interactive from "./interactive";
 
 const images = {
     uv: require("./systemgodkjenning/Systemgodkjenning_2_6_2_UV.jpg"),
-    soft: require("./systemgodkjenning/Systemgodkjenning_2_6_1_soft.jpg")
+    soft: require("./systemgodkjenning/Systemgodkjenning_2_6_1_soft.jpg"),
+    firecurb: require("./systemgodkjenning/Systemgodkjenning_2_6_3_FireCurb.jpg")
 };
 
-preloader([images.uv, images.soft]);
+preloader([images.uv, images.soft, images.firecurb]);
 
 
 class Master extends React.Component {
@@ -26,8 +27,9 @@ class Master extends React.Component {
 		<Link className="deckLink" href="/systemhus/0/"> </Link>
 
 		<Deck transition={[ "fade"]} progress="tabs" base="/vindsperrer/" transitionDuration={800}>
-		    <Slide  bgImage={images.uv} tab="UV fasade"></Slide>
 		    <Slide  bgImage={images.soft} tab="Soft vindsperre"></Slide>
+		    <Slide  bgImage={images.uv} tab="UV fasade"></Slide>
+		    <Slide  bgImage={images.firecurb} tab="Isola Tyvek FireCurb™"></Slide>
 		</Deck>
 	    </div>
 	);

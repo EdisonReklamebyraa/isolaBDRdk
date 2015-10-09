@@ -19,20 +19,14 @@ const images = {
     shingel: require("./nyheter/Shingel_1.jpg"),
     gronnetak: require("./nyheter/Gronnetak_1.jpg"),
     dampsperrer: require("./nyheter/Dampsperrer_1.jpg"),
-    zink: require("./nyheter/Zink_1.jpg")
+    rorosvinduet: require("./nyheter/Rorosvinduet_1.jpg"),
+    zink: require("./nyheter/Zink_1.jpg"),
+    tape: require("./tape/tape_1.jpg")
 };
 
-preloader([images.isod,
-           images.kilrenne,
-           images.komplettdeal,
-           images.softxtra,
-           images.systemgodkjennig,
-           images.shingel,
-           images.gronnetak,
-           images.dampsperrer,
-           images.zink
+ 
+preloader([images.isod, images.kilrenne ,images.komplettdeal, images.softxtra, images.systemgodkjennig, images.gronnetak, images.dampsperrer, images.rorosvinduet, images.zink, images.tape]);
 
-]);
 
    class News extends React.Component {
     constructor(props) {
@@ -68,12 +62,14 @@ preloader([images.isod,
 			              <Slide bgImage={images.isod } tickerText="NYTT UNDERLAGSBELEGG MED SELVKLEBENDE OMLEGG" />
 			              <Slide bgImage={images.kilrenne } tickerText="KOMPLETT SYSTEM SOM FORENKLER HÅNDVERKERS HVERDAG" />
 			              <Slide bgImage={images.komplettdeal } tickerText="Nytt og lønnsomt Isola-Tyvek proffkonsept" />
+			              <Slide bgImage={images.tape } tickerText="Xtra sterk, monteringsvennlig, fuktsikker, robust og aldringsbestandig." />
 			              <Slide bgImage={images.softxtra } tickerText="Ny generasjon vindsperre - xtra sterk - xtra monterinsvennlig" />
 			              <Slide bgImage={images.systemgodkjennig } tickerText="Først i landet med SINTEF Byggforsk systemgodkjenning" />
 			              <Slide bgImage={images.zink } tickerText="MONTERINGVENNLIG OG KOMPLETT SORTIMENT" />
 			              <Slide bgImage={images.shingel } tickerText="30 ÅRS GARANTI PÅ PRODUKTET" />
 			              <Slide bgImage={images.gronnetak } tickerText="For fremtidens bymiljø" />
 			              <Slide bgImage={images.dampsperrer } tickerText="Smarte løsninger" />
+			              <Slide bgImage={images.rorosvinduet } tickerText="Nye aluminiumsbeklede vinduer fra Røros" />
 
                 </Deck>
             </div>

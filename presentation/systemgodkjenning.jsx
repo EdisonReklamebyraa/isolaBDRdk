@@ -16,10 +16,11 @@ const images = {
     takmansjett: require("./systemgodkjenning/Systemgodkjenning_2_4_takmansjett.jpg"),
     rims: require("./systemgodkjenning/Systemgodkjenning_2_5_rims.jpg"),
     soft: require("./systemgodkjenning/Systemgodkjenning_2_6_1_soft.jpg"),
+    vindu: require("./systemgodkjenning/Systemgodkjenning_2_7_vindu.jpg"),
     tape: require("./systemgodkjenning/Systemgodkjenning_2_5_tape.jpg")
 };
 
-preloader([images.svillemembran, images.flexwrap, images.takmansjett, images.rims, images.soft, images.tape]);
+preloader([images.svillemembran, images.flexwrap, images.takmansjett, images.rims, images.soft, images.tape, images.vindu]);
 
 
 class Images extends React.Component {
@@ -37,6 +38,7 @@ class Images extends React.Component {
 				    <Slide bgImage={images.rims} id="rims" />
 				    <Slide bgImage={images.soft} id="soft" />
 				    <Slide bgImage={images.tape} id="tape" />
+				    <Slide bgImage={images.vindu} id="vindu" />
 
                 </Deck>
             </div>

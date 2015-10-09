@@ -21,6 +21,9 @@ import takbelegg from "./presentation/takbelegg";
 import rorosvinduet from "./presentation/rorosvinduet";
 import gronnetak from "./presentation/gronnetak";
 import dampsperrer from "./presentation/dampsperrer";
+import zink from "./presentation/zink";
+
+import innovasjon from "./presentation/innovasjon";
 
 import config from "./presentation/config";
 
@@ -48,14 +51,18 @@ class OuterMostParentComponent extends React.Component {
                 <Route path="/images/:slide" component={wrap(Images)} />
 
                 <Route path="/:slide" component={wrap(nyheter)} />
-				        <Route path="/komplettdeal/:slide" component={wrap(komplettdeal)} />
-				        <Route path="/systemhus/:slide" component={wrap(systemhus)} />
-				        <Route path="/systemgodkjenning/:slide" component={wrap(systemgodkjenning)} />
-				        <Route path="/vindsperrer/:slide" component={wrap(vindsperrer)} />
-				        <Route path="/takbelegg/:slide" component={wrap(takbelegg)} />
-				        <Route path="/rorosvinduet/:slide" component={wrap(rorosvinduet)} />
-				        <Route path="/gronnetak/:slide" component={wrap(gronnetak)} />
-				        <Route path="/dampsperrer/:slide" component={wrap(dampsperrer)} />
+		        
+		        <Route path="/komplettdeal/:slide" component={wrap(komplettdeal)} />
+		        <Route path="/systemhus/:slide" component={wrap(systemhus)} />
+		        <Route path="/systemgodkjenning/:slide" component={wrap(systemgodkjenning)} />
+		        <Route path="/vindsperrer/:slide" component={wrap(vindsperrer)} />
+		        <Route path="/takbelegg/:slide" component={wrap(takbelegg)} />
+		        <Route path="/rorosvinduet/:slide" component={wrap(rorosvinduet)} />
+		        <Route path="/gronnetak/:slide" component={wrap(gronnetak)} />
+		        <Route path="/dampsperrer/:slide" component={wrap(dampsperrer)} />
+		        <Route path="/zink/:slide" component={wrap(zink)} />
+		        
+		        <Route path="/innovasjon/:slide" component={wrap(innovasjon)} />
                 
             </Router>
         );

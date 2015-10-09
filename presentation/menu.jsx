@@ -22,7 +22,7 @@ const links = [
     {x:710, y:490, link:"/komplettdeal/0"},
     {x:710, y:840, link:"/takbelegg/0"},
 
-    {x:1160, y:160, link:"/images/zink"},
+    {x:1160, y:160, link:"/zink/0"},
     {x:1160, y:490, link:"/systemhus/0"},
     {x:1160, y:840, link:"/gronnetak/0"},
 
