@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "alt": "0.16.10",
+    "appcache-webpack-plugin": "^1.2.0",
     "highlight.js": "8.8.0",
     "hjs-webpack": "2.8.1",
     "lodash": "3.9.3",
