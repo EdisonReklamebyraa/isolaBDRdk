@@ -11,19 +11,19 @@ import preloader from "../src/utils/preloader";
 
 const images = {
 
-    S1: require("./innovasjon/S1_clean.jpg"),
-    S2: require("./innovasjon/S2_clean.jpg"),
-    S3: require("./innovasjon/S3_clean.jpg"),
-    S4: require("./innovasjon/S4_clean.jpg"),
-    S5: require("./innovasjon/S5_clean.jpg"),
-    S6: require("./innovasjon/S6_clean.jpg"),
-    S7: require("./innovasjon/S7_clean.jpg"),
-    S8: require("./innovasjon/S8_clean.jpg"),
-    S9: require("./innovasjon/S9_clean.jpg"),
-    S10: require("./innovasjon/S10_clean.jpg"),
-    S11: require("./innovasjon/S11_clean.jpg"),
-    S12: require("./innovasjon/S12_clean.jpg"),
-    S13: require("./innovasjon/S13_clean.jpg")
+    S1: require("./innovasjon/S1.jpg"),
+    S2: require("./innovasjon/S2.jpg"),
+    S3: require("./innovasjon/S3.jpg"),
+    S4: require("./innovasjon/S4.jpg"),
+    S5: require("./innovasjon/S5.jpg"),
+    S6: require("./innovasjon/S6.jpg"),
+    S7: require("./innovasjon/S7.jpg"),
+    S8: require("./innovasjon/S8.jpg"),
+    S9: require("./innovasjon/S9.jpg"),
+    S10: require("./innovasjon/S10.jpg"),
+    S11: require("./innovasjon/S11.jpg"),
+    S12: require("./innovasjon/S12.jpg"),
+    S13: require("./innovasjon/S13.jpg")
 
 };
 
