@@ -6,8 +6,7 @@ var AppCachePlugin = require('appcache-webpack-plugin');
 var webpackConfig = getConfig({
   in: "./index.jsx",
   out: "dist",
-  clearBeforeBuild: true,
-  html: config.html
+  clearBeforeBuild: true
 });
 
 console.log(webpackConfig);
