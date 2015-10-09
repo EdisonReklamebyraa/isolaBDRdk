@@ -20,6 +20,7 @@ class Interactive extends React.Component {
             background: "black",
             minWidth: 300,
             marginTop: 20,
+            textTransform: "uppercase",
             border: "none",
             color: "white",
             outline: "none",
