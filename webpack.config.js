@@ -6,10 +6,11 @@ var AppCachePlugin = require('appcache-webpack-plugin');
 var webpackConfig = getConfig({
   in: "./index.jsx",
   out: "dist",
-  clearBeforeBuild: true
+  clearBeforeBuild: true,
+  html: config.html
 });
 
-console.log(webpackConfig);
+
 
 webpackConfig.module.loaders[0] = {
   test: /(\.js$)|(\.jsx$)/,
@@ -21,7 +22,8 @@ webpackConfig.module.loaders[0] = {
 
 webpackConfig.plugins.push(
     new AppCachePlugin({
-        network: ["*"]
+        network: ["*"],
+        fallback: ["/","/index.html"]
     })
 );
 
