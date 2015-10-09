@@ -432,7 +432,7 @@ Deck.contextTypes = {
     presenter: React.PropTypes.bool,
     export: React.PropTypes.bool,
     overview: React.PropTypes.bool,
-    slide: React.PropTypes.number
+    slide: React.PropTypes.any
 };
 
 export default Deck;

@@ -39,6 +39,11 @@ var Ticker = React.createClass({
 
         this.timeOut = setTimeout( this.props.nextSlide , timeout)
     },
+
+    componentWillUnmount: function(){
+       this.clearTimout(); 
+    },
+    
     componentDidUpdate : function() {
         var width = React.findDOMNode(this.refs.txt).offsetWidth; 
         var node = React.findDOMNode(this.refs.ticker);

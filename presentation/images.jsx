@@ -29,13 +29,15 @@ class Images extends React.Component {
             <div>
                 <Link className="backLink" href="/"> </Link>
                 
-                <Deck transition={[ "slide"]} progress="none" base="/images/" transitionDuration={800}>
+
+                <Deck base="/images/">
 				    <Slide bgImage={images.isod} id="isod"/>
 				    <Slide bgImage={images.kilrenne} id="kilrenne" />
 				    <Slide bgImage={images.softxtra} id="softxtra" />
 				    <Slide bgImage={images.zink} id="zink" />
 				    <Slide bgImage={images.shingel} id="shingel" />
 				    <Slide bgImage={images.tape} id="tape" />
+
 
                 </Deck>
             </div>

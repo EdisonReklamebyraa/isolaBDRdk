@@ -29,19 +29,17 @@ preloader([images.isod, images.kilrenne ,images.komplettdeal, images.softxtra, i
    class News extends React.Component {
     constructor(props) {
         super(props);
-        this.contextTypes = {
-            router: React.PropTypes.object.isRequired
-        };
-
+      
     }  
     
     updatedSlide(i, slide){
         this.refs.ticker.updateSlide(slide);            
     }
 
-    nextSlide(){
-        this.refs.deck.next();
-    }    
+       nextSlide(){
+           if(this.refs.deck && this.refs.deck.next)
+               this.refs.deck.next();
+       }    
 
     
     render() {

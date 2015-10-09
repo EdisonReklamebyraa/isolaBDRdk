@@ -55,10 +55,10 @@ preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, ima
 
 
                 
-                <Deck ref="deck"
+                <Deck ref="ticker" base="/innovasjon/" 
 		                  transition={[ "fade"]}
                       progress="none"
-                      updatedSlide={this.updatedSlide.bind(this)}                      
+                                            
 		                  transitionDuration={1000}>
 
 			              <Slide bgImage={images.S1 }/>
