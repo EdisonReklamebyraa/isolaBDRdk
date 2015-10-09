@@ -51,8 +51,7 @@ preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, ima
 
         return (
             <div onClick={this.goto.bind(this)}>
-		            <Link className="backLink" href="/0"> </Link>
-
+		            
 
                 
                 <Deck ref="ticker" base="/innovasjon/" 
