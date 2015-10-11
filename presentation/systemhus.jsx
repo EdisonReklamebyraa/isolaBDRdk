@@ -14,13 +14,13 @@ const images = {
 };
 
 const links = [
-    {x:1410, y:790, link:"/systemgodkjenning/svillemembran"},
-    {x:860, y:220, link:"/systemgodkjenning/flexwrap"},
-    {x:670, y:280, link:"/systemgodkjenning/takmansjett"},
-    {x:575, y:390, link:"/systemgodkjenning/rims"},
-    {x:1153, y:680, link:"/vindsperrer/0"},
-    {x:334, y:622, link:"/systemgodkjenning/tape"},
-    {x:755, y:744, link:"/systemgodkjenning/vindu"}
+    {x:1476, y:780, link:"/systemgodkjenning/svillemembran"},
+    {x:980, y:260, link:"/systemgodkjenning/flexwrap"},
+    {x:740, y:280, link:"/systemgodkjenning/takmansjett"},
+    {x:640, y:420, link:"/systemgodkjenning/rims"},
+    {x:1250, y:620, link:"/vindsperrer/0"},
+    {x:410, y:630, link:"/systemgodkjenning/tape"},
+    {x:840, y:740, link:"/systemgodkjenning/vindu"}
 ]; 
 
 preloader([images.oversikt]);

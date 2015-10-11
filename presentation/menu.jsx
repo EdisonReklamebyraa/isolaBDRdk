@@ -15,7 +15,7 @@ const images = {
 
 const links = [
     {x:270, y:160, link:"/images/isod"},
-    {x:270, y:490, link:"/images/kilrenne"},
+    {x:270, y:490, link:"/kilrenne/0"},
     {x:270, y:840, link:"/images/tape"},
 
     {x:710, y:160, link:"/images/shingel"},
