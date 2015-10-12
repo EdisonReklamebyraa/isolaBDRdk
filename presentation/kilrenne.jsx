@@ -28,7 +28,7 @@ class Master extends React.Component {
 		    <Slide  bgImage={images.kilrenne} tab="Kilrenne"></Slide>
 		    <Slide tab="Monteringsvideo">
 		    	<video   width="100%" height="100%" controls autoPlay >
-					<source src="http://www.isola.no/presentation/kilrenne/kilrennemontering.mp4" type="video/mp4" />
+					<source src="/presentation/kilrenne/kilrennemontering.mp4" type="video/mp4" />
 		    	</video>
 		    </Slide>
 		</Deck>

@@ -13,7 +13,6 @@ var webpackConfig = getConfig({
 
 
 webpackConfig.module.loaders[0] = {
-  cache: ['http://www.isola.no/presentation/kilrenne/kilrennemontering.mp4'],
   test: /(\.js$)|(\.jsx$)/,
   exclude: /node_modules/,
   loaders: [
@@ -24,6 +23,8 @@ webpackConfig.module.loaders[0] = {
 webpackConfig.plugins.push(
     new AppCachePlugin({
         network: ["*"],
+        cache: ['/presentation/kilrenne/kilrennemontering.mp4'],
+        settings: ['fast'],
         fallback: ["/","/index.html"]
     })
 );
