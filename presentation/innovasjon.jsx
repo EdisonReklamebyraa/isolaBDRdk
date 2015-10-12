@@ -18,7 +18,6 @@ const images = {
     S5: require("./innovasjon/S5.jpg"),
     S6: require("./innovasjon/S6.jpg"),
     S7: require("./innovasjon/S7.jpg"),
-    S8: require("./innovasjon/S8.jpg"),
     S9: require("./innovasjon/S9.jpg"),
     S10: require("./innovasjon/S10.jpg"),
     S11: require("./innovasjon/S11.jpg"),
@@ -27,7 +26,7 @@ const images = {
 
 };
 
-preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, images.s7, images.s8, images.s9, images.s10, images.s11, images.s12, images.s13]);
+preloader([images.s1, images.s2, images.s3, images.s4, images.s5, images.s6, images.s7, images.s9, images.s10, images.s11, images.s12, images.s13]);
 
 class Innovasjon extends React.Component {
     constructor(props) {
@@ -65,7 +64,6 @@ class Innovasjon extends React.Component {
 			              <Slide bgImage={images.S5 }/>
 			              <Slide bgImage={images.S6 }/>
 			              <Slide bgImage={images.S7 }/>
-			              <Slide bgImage={images.S8 }/>
 			              <Slide bgImage={images.S9 }/>
 			              <Slide bgImage={images.S10 }/>
 			              <Slide bgImage={images.S11 }/>
