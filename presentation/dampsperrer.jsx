@@ -11,10 +11,13 @@ import Interactive from "./interactive";
 
 const images = {
     smart: require("./dampsperrer/Smart.jpg"),
-    reflective: require("./dampsperrer/Reflective.jpg")
+    reflective: require("./dampsperrer/Reflective.jpg"),
+    smart_funksjon: require("./dampsperrer/Smart_funksjon.jpg"),
+    reflective_funksjon: require("./dampsperrer/Reflective_funksjon.jpg")
+
 };
 
-preloader([images.smart, images.reflective]);
+preloader([images.smart, images.reflective, images.smart_funksjon, images.reflective_funksjon]);
 
 
 class Master extends React.Component {
@@ -27,7 +30,9 @@ class Master extends React.Component {
 
 		<Deck transition={[ "fade"]} progress="tabs" base="/dampsperrer/" transitionDuration={800}>
 		    <Slide  bgImage={images.smart} tab="Isola AirGuard® Smart"></Slide>
+		    <Slide  bgImage={images.smart_funksjon} tab="Smart funksjon"></Slide>
 		    <Slide  bgImage={images.reflective} tab="Isola AirGuard Reflective"></Slide>
+		    <Slide  bgImage={images.reflective_funksjon} tab="Reflective funksjon"></Slide>
 		</Deck>
 	    </div>
 	);

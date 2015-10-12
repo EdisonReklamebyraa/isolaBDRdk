@@ -29,9 +29,9 @@ class Master extends React.Component {
 
 		<Deck transition={[ "fade"]} progress="tabs" base="/komplettdeal/" transitionDuration={800}>
 		    <Slide  bgImage={images.komplettdeal} tab="Komplett deal"></Slide>
+		    <Slide  bgImage={images.systemgodkjenning} tab="Systemgodkjenning"></Slide>
 		    <Slide  bgImage={images.garanti} tab="Garanti"></Slide>
 		    <Slide  bgImage={images.faglig} tab="Faglig oppdatering"></Slide>
-		    <Slide  bgImage={images.systemgodkjenning} tab="Systemgodkjenning"></Slide>
 		</Deck>
 	    </div>
 	);

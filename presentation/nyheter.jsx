@@ -19,13 +19,14 @@ const images = {
     shingel: require("./nyheter/Shingel_1.jpg"),
     gronnetak: require("./nyheter/Gronnetak_1.jpg"),
     dampsperrer: require("./nyheter/Dampsperrer_1.jpg"),
+    takbelegg: require("./nyheter/Takbelegg_1.jpg"),
     rorosvinduet: require("./nyheter/Rorosvinduet_1.jpg"),
     zink: require("./nyheter/Zink_1.jpg"),
     tape: require("./nyheter/tape_1.jpg")
 };
 
  
-preloader([images.isod, images.kilrenne ,images.komplettdeal, images.softxtra, images.systemgodkjennig, images.gronnetak, images.dampsperrer, images.rorosvinduet, images.zink, images.tape]);
+preloader([images.isod, images.kilrenne ,images.komplettdeal, images.softxtra, images.systemgodkjennig, images.gronnetak, images.dampsperrer, images.rorosvinduet, images.takbelegg, images.zink, images.tape]);
 
 
    class News extends React.Component {
@@ -59,17 +60,18 @@ preloader([images.isod, images.kilrenne ,images.komplettdeal, images.softxtra, i
                       updatedSlide={this.updatedSlide.bind(this)}                      
 		                  transitionDuration={1000}>
 
-			              <Slide bgImage={images.isod } tickerText="Nytt underlagsbelegg med selvklebende omlegg" />
-			              <Slide bgImage={images.kilrenne } tickerText="Komplett system som forenkler håndverkers hverdag" />
-			              <Slide bgImage={images.komplettdeal } tickerText="Nytt og lønnsomt Isola-Tyvek proffkonsept" />
-			              <Slide bgImage={images.tape } tickerText="Ny klebesterk og fleksibel vindsperre tape til forsegling av detaljer" />
-			              <Slide bgImage={images.softxtra } tickerText="Ny generasjon vindsperre - xtra sterk - xtra monterinsvennlig" />
-			              <Slide bgImage={images.systemgodkjennig } tickerText="Først i landet med SINTEF Byggforsk systemgodkjenning" />
-			              <Slide bgImage={images.zink } tickerText="Monteringvennlig og komplett sortiment" />
-			              <Slide bgImage={images.shingel } tickerText="30 års garanti på produktet" />
-			              <Slide bgImage={images.gronnetak } tickerText="For fremtidens bymiljø" />
-			              <Slide bgImage={images.dampsperrer } tickerText="Smarte løsninger" />
-			              <Slide bgImage={images.rorosvinduet } tickerText="Nye aluminiumsbeklede vinduer fra Røros" />
+				      <Slide bgImage={images.isod } tickerText="Nytt underlagsbelegg med selvklebende omlegg - for skråtak ned til 6 graders takfall" />
+				      <Slide bgImage={images.kilrenne } tickerText="Komplett løsning for alle typer lektede skråtak - Effektivt system som forenkler proffens hverdag" />
+				      <Slide bgImage={images.komplettdeal } tickerText="Isola tilbyr nytt proffkonsept med komplette løsninger - Gir garantert tett og fuktsikkert bygg" />
+				      <Slide bgImage={images.softxtra } tickerText="Ny generasjon Soft vindsperre - Xtra sterk, Xtra fuktsikker og Xtra monterinsvennlig" />
+				      <Slide bgImage={images.systemgodkjennig } tickerText="Isola er først ute med SINTEF Byggforsk Teknisk Godkjenning av et komplett klimasystem" />
+				      <Slide bgImage={images.zink } tickerText="Isola styrker seg på takrenner og lanserer monteringvennlig og komplett zink-sortiment" />
+				      <Slide bgImage={images.tape } tickerText="Ny klebesterk og fleksibel vindsperre tape - Til forsegling av vindsperrer mot gjennomføringer og detaljer" />
+				      <Slide bgImage={images.takbelegg } tickerText="Asfalt takbelegg og membraner, produsert i Norge for norske værforhold" />
+				      <Slide bgImage={images.shingel } tickerText="30 års garanti på Isola Takshingel med ny og forbedret asfalt kvalitet" />
+				      <Slide bgImage={images.gronnetak } tickerText="Effektive løsninger som beskytter, drenerer og fordrøyer større mengder regnvann" />
+				      <Slide bgImage={images.dampsperrer } tickerText="Dampsperre med variabel vanndampmotstand - Sikkerhetsventil ved innestengt fukt" />
+				      <Slide bgImage={images.rorosvinduet } tickerText="Nye aluminiumsbekledde vinduer fra Røros - Moderne, solide og vedlikeholdsvennlige" />
 
                 </Deck>
             </div>
