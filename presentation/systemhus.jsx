@@ -20,6 +20,7 @@ const links = [
     {x:640, y:420, link:"/systemgodkjenning/rims"},
     {x:1250, y:620, link:"/vindsperrer/0"},
     {x:410, y:630, link:"/systemgodkjenning/tape"},
+    {x:1230, y:300, link:"/systemgodkjenning/undertak"},
     {x:840, y:740, link:"/systemgodkjenning/vindu"}
 ]; 
 
