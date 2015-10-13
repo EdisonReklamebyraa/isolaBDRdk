@@ -27,7 +27,7 @@ class Master extends React.Component {
 		<Deck transition={[ "fade"]} progress="tabs" base="/kilrenne/" transitionDuration={800}>
 		    <Slide  bgImage={images.kilrenne} tab="Kilrenne"></Slide>
 		    <Slide tab="Monteringsvideo">
-		    	<video   width="100%" height="100%" controls autoPlay >
+		    	<video   width="90%" height="100%" controls autoPlay >
 					<source src="/presentation/kilrenne/kilrennemontering.mp4" type="video/mp4" />
 		    	</video>
 		    </Slide>
