@@ -1,0 +1,200 @@
+<h1 id="plain-javascript">Plain JavaScript</h1>
+
+<p>While alt examples encourage ES6 and alt was built with ES6 in mind it is perfectly valid to use plain old JavaScript instead. This guide will focus on a few examples of how you can use alt without the new ES6 hotness.</p>
+
+<h2 id="creating-actions">Creating Actions</h2>
+
+<p>There are quite a few ways to create actions. If they don’t process any data and just dispatch a single argument through you can generate them based off of strings. You can create them using constructors and prototypes, or you can use a plain old JS object.</p>
+
+<p><code>js
+var foodActions = alt.generateActions('addItem');
+</code></p>
+
+<p>which is the equivalent to</p>
+
+<p><code>js
+var foodActions = alt.createActions(function () {
+  this.addItem = function (item) {
+    this.dispatch(item);
+  };
+});
+</code></p>
+
+<p>or</p>
+
+<p><code>js
+var foodActions = alt.createActions({
+  addItem: function (item) {
+    this.dispatch(item);
+  }
+});
+</code></p>
+
+<h2 id="creating-stores">Creating Stores</h2>
+
+<p>You can use constructors and prototypes to create a store, or use an object.</p>
+
+<p>```js
+function FoodStore() {
+  this.foods = [];</p>
+
+<p>this.bindListeners({
+    addItem: foodActions.addItem
+  });</p>
+
+<p>this.exportPublicMethods({
+    hasFood: function() {
+      return !!this.getState().foods.length;
+    }
+  });
+}</p>
+
+<p>FoodStore.prototype.addItem = function (item) {
+  this.foods.push(item);
+};</p>
+
+<p>FoodStore.displayName = ‘FoodStore’;</p>
+
+<p>var foodStore = alt.createStore(FoodStore);
+```</p>
+
+<p>which can also be written as an Object:</p>
+
+<p>```js
+var FoodStore = alt.createStore({
+  displayName: ‘FoodStore’,</p>
+
+<p>bindListeners: {
+    addItem: foodActions.addItem
+  },</p>
+
+<p>state: {
+    foods: []
+  },</p>
+
+<p>pubilcMethods: {
+    hasFood: function () {
+      return !!this.getState().foods.length;
+    }
+  },</p>
+
+<p>addItem: function (item) {
+    var foods = this.state.foods;
+    foods.push(item);
+    this.setState({
+      foods: foods
+    });
+  }
+});
+```</p>
+
+<p>The interesting thing about the Object pattern is that you can use the old ES3 Module pattern to create your stores:</p>
+
+<p>```js
+function FoodStore(initialFood) {
+  var foods = [];
+  for (var i = 0; i &lt; initialFood.length; i += 1) {
+    if (initialFood !== ‘banana’) {
+      foods.push(initialFood);
+    }
+  }</p>
+
+<p>return {
+    displayName: ‘FoodStore’,</p>
+
+<pre><code>bindListeners: {
+  addItem: foodActions.addItem
+},
+
+state: {
+  foods: foods
+},
+pubilcMethods: {
+  hasFood: function () {
+    return foods.length;
+  }
+},
+
+addItem: function (item) {
+  var foods = this.state.foods;
+  foods.push(item);
+  this.setState({
+    foods: foods
+  });
+}   }; }
+</code></pre>
+
+<p>var foodStore = alt.createStore(
+  FoodStore([‘banana’, ‘strawberry’, ‘mango’, ‘orange’])
+);
+```</p>
+
+<p>A less explicit way of creating a public method is to statically define it as property of the store constructor function:
+<code>
+FoodStore.hasFood = function() {
+  return !!this.getState().length;
+}
+</code></p>
+
+<h2 id="instances">Instances</h2>
+
+<p>You can even create instances of alt if you prefer that over singletons. You would use JavaScript’s prototypal inheritance to achieve this.</p>
+
+<p>```js
+// Actions
+var FoodActionsObject = {
+  addItem: function (item) {
+    this.dispatch(item);
+  }
+};</p>
+
+<p>// Creating a store, notice how we inject the actions
+function FoodStore(FoodActions) {
+  return {
+    state: {
+      foods: []
+    },</p>
+
+<pre><code>bindListeners: {
+  addItem: FoodActions.addItem
+},
+
+addItem: function (item) {
+  var foods = this.state.foods;
+  foods.push(item);
+  this.setState({
+    foods: foods
+  });
+}   }; }
+</code></pre>
+
+<p>// The flux class
+function Flux() {
+  // super()
+  Alt.apply(this, arguments);</p>
+
+<p>this.addActions(‘FoodActions’, FoodActionsObject);
+  this.addStore(‘FoodStore’, FoodStore(this.getActions(‘FoodActions’)));
+}</p>
+
+<p>// ES5 based inheritance
+Flux.prototype = Object.create(Alt.prototype, {
+  constructor: {
+    value: Flux,
+    enumerable: false,
+    writable: true,
+    configurable: true
+  }
+});</p>
+
+<p>Flux.<strong>proto</strong> = Alt</p>
+
+<p>// using it
+var flux = new Flux();</p>
+
+<p>// use flux like you normally would
+flux.getActions(‘FoodActions’).addItem(‘celery’);
+console.log(
+  flux.getStore(‘FoodStore’).getState()
+);
+```</p>

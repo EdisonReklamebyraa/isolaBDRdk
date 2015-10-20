@@ -1,0 +1,90 @@
+<h1 id="creating-instances-of-your-flux">Creating instances of your Flux</h1>
+
+<p>If using a singleton is scary to you, or if you believe dependency injection is the way to go then this is the feature for you. You don’t have to settle for traditional flux and its singleton stores. You can create separate instances of the Alt universe and then inject these into your view via dependency injection or if you’re using React, contexts. With this approach you get isomorphism for free, without having to worry about flushing your stores, since each request will generate its own instance.</p>
+
+<p>Using instances of alt is fairly straightforward.</p>
+
+<p>```js
+class MyAlt extends Alt {
+  constructor(config = {}) {
+    super(config);</p>
+
+<pre><code>this.addActions('myActions', ActionCreators);
+this.addStore('storeName', Store);   } }
+</code></pre>
+
+<p>var flux = new MyAlt();
+```</p>
+
+<p>You can set your entire app context by wrapping your root component with <code>withAltContext</code>.</p>
+
+<p>As a decorator:
+```js
+import withAltContext from ‘alt/utils/withAltContext’</p>
+
+<p>@withAltContext(alt)
+export default class App extends React.Component {
+  render() {
+    return &lt;div&gt;{this.context.flux}&lt;/div&gt;
+  }
+}
+```</p>
+
+<p>As a function:
+```js
+import withAltContext from ‘alt/utils/withAltContext’</p>
+
+<p>export default withAltContext(alt)(App);
+```</p>
+
+<h1 id="altclass">AltClass</h1>
+
+<h2 id="altclassconstructor">AltClass#constructor</h2>
+
+<blockquote>
+  <p>constructor(config: object) : Alt</p>
+</blockquote>
+
+<h2 id="altclassaddactions">AltClass#addActions</h2>
+
+<blockquote>
+  <p>addActions(actionsName: string, actions: <a href="createActions.md">ActionsClass</a>): undefined</p>
+</blockquote>
+
+<p>Creates the actions for this instance.</p>
+
+<h2 id="altclassaddstore">AltClass#addStore</h2>
+
+<blockquote>
+  <p>addStore(name: string, store: <a href="createStore.md">StoreModel</a>, saveStore: boolean): undefined</p>
+</blockquote>
+
+<p>Creates the store for this instance.</p>
+
+<h2 id="altclassgetactions">AltClass#getActions</h2>
+
+<blockquote>
+  <p>getActions(): <a href="actions.md">Actions</a></p>
+</blockquote>
+
+<p>Retrieves the created actions. This becomes useful when you need to bind the actions in the store.</p>
+
+<p><code>js
+class MyStore {
+  constructor(alt) {
+    this.bindActions(this.alt.getActions('myActions'));
+  }
+}
+</code></p>
+
+<h2 id="altclassgetstore">AltClass#getStore</h2>
+
+<blockquote>
+  <p>getStore(): <a href="stores.md">AltStore</a></p>
+</blockquote>
+
+<p>Retrieves the store instance that was created.</p>
+
+<p><code>js
+var state = alt.getStore('myStore').getState();
+</code></p>
