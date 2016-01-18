@@ -13,18 +13,17 @@ import Menu from "./presentation/menu";
 import Images from "./presentation/images";
 
 import nyheter from "./presentation/nyheter";
-import komplettdeal from "./presentation/komplettdeal";
-import systemhus from "./presentation/systemhus";
-import systemgodkjenning from "./presentation/systemgodkjenning";
-import vindsperrer from "./presentation/vindsperrer";
-import takbelegg from "./presentation/takbelegg";
-import rorosvinduet from "./presentation/rorosvinduet";
-import gronnetak from "./presentation/gronnetak";
-import dampsperrer from "./presentation/dampsperrer";
-import zink from "./presentation/zink";
-import kilrenne from "./presentation/kilrenne";
 
-import innovasjon from "./presentation/innovasjon";
+import platonxtra from "./presentation/platonxtra";
+import radonsikring from "./presentation/radonsikring";
+import tapeogkleb from "./presentation/tapeogkleb";
+import veggogklimasystem from "./presentation/veggogklimasystem";
+import undertage from "./presentation/undertage";
+import gronnetak from "./presentation/gronnetak";
+import tagpap from "./presentation/tagpap";
+
+
+
 
 import config from "./presentation/config";
 
@@ -53,18 +52,15 @@ class OuterMostParentComponent extends React.Component {
 
                 <Route path="/:slide" component={wrap(nyheter)} />
 		        
-		        <Route path="/komplettdeal/:slide" component={wrap(komplettdeal)} />
-		        <Route path="/systemhus/:slide" component={wrap(systemhus)} />
-		        <Route path="/systemgodkjenning/:slide" component={wrap(systemgodkjenning)} />
-		        <Route path="/vindsperrer/:slide" component={wrap(vindsperrer)} />
-		        <Route path="/takbelegg/:slide" component={wrap(takbelegg)} />
-		        <Route path="/rorosvinduet/:slide" component={wrap(rorosvinduet)} />
+		        <Route path="/platonxtra/:slide" component={wrap(platonxtra)} />
+
+		        <Route path="/radonsikring/:slide" component={wrap(radonsikring)} />
+		        <Route path="/tapeogkleb/:slide" component={wrap(tapeogkleb)} />
+		        <Route path="/veggogklimasystem/:slide" component={wrap(veggogklimasystem)} />
+		        <Route path="/undertage/:slide" component={wrap(undertage)} />
 		        <Route path="/gronnetak/:slide" component={wrap(gronnetak)} />
-		        <Route path="/dampsperrer/:slide" component={wrap(dampsperrer)} />
-		        <Route path="/zink/:slide" component={wrap(zink)} />
-		        <Route path="/kilrenne/:slide" component={wrap(kilrenne)} />
+		        <Route path="/tagpap/:slide" component={wrap(tagpap)} />
 		        
-		        <Route path="/innovasjon/:slide" component={wrap(innovasjon)} />
                 
             </Router>
         );

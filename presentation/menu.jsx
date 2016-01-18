@@ -14,22 +14,18 @@ const images = {
 };
 
 const links = [
-    {x:270, y:160, link:"/images/isod"},
-    {x:270, y:490, link:"/kilrenne/0"},
-    {x:270, y:840, link:"/images/tape"},
+    {x:270, y:160, link:"/undertage/0"},
+    {x:270, y:490, link:"/tapeogkleb/0"},
 
     {x:710, y:160, link:"/images/shingel"},
-    {x:710, y:490, link:"/komplettdeal/0"},
-    {x:710, y:840, link:"/takbelegg/0"},
+    {x:710, y:490, link:"/tagpap/0"},
 
-    {x:1160, y:160, link:"/zink/0"},
-    {x:1160, y:490, link:"/systemhus/0"},
-    {x:1160, y:840, link:"/gronnetak/0"},
+    {x:1160, y:160, link:"/radonsikring/0"},
+    {x:1160, y:490, link:"/gronnetak/0"},
 
 
-    {x:1600, y:160, link:"/dampsperrer/0"},
-    {x:1600, y:490, link:"/images/softxtra"},
-    {x:1600, y:840, link:"/rorosvinduet/0"},
+    {x:1600, y:160, link:"/veggogklimasystem/0"},
+    {x:1600, y:490, link:"/platonxtra/0"},
 
 
 ]; 

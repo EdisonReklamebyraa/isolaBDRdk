@@ -29,7 +29,7 @@ class Gallery extends React.Component {
             <div>
                 <Link className="deckLink" href="/"> </Link>
 
-                <Deck transition={[ "fade"]} title="Isola Grønne tak" progress="gallery" base="/gronnetak/" transitionDuration={800}>
+                <Deck transition={[ "fade"]} title="Isola Grønne tage" progress="gallery" base="/gronnetak/" transitionDuration={800}>
                     <Slide  bgImage={images.gronnetak5} tab="1"></Slide>
                     <Slide  bgImage={images.gronnetak6} tab="2"></Slide>
                     <Slide  bgImage={images.gronnetak1} tab="3"></Slide>
