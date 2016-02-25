@@ -86,7 +86,7 @@ class Progress extends Base {
                                 <span>Forrige</span></li> 
 
                             <li key="prev" onClick={this.click.bind(this,this.props.base + this.next() )}>
-                                <span>Neste</span></li>
+                                <span>Næste</span></li>
 
                         </ul>
 

@@ -22,7 +22,7 @@ import undertage from "./presentation/undertage";
 import gronnetak from "./presentation/gronnetak";
 import tagpap from "./presentation/tagpap";
 
-
+import innovasjon from "./presentation/innovasjon";
 
 
 import config from "./presentation/config";
@@ -61,7 +61,7 @@ class OuterMostParentComponent extends React.Component {
 		        <Route path="/gronnetak/:slide" component={wrap(gronnetak)} />
 		        <Route path="/tagpap/:slide" component={wrap(tagpap)} />
 		        
-                
+                <Route path="/innovasjon/:slide" component={wrap(innovasjon)} />
             </Router>
         );
     }

@@ -28,7 +28,7 @@ class Master extends React.Component {
 		<Link className="deckLink" href="/"> </Link>
 
 		<Deck transition={[ "fade"]} progress="tabs" base="/radonsikring/" transitionDuration={800}>
-		    <Slide  bgImage={images.radon1} tab="Radonsperre 400"></Slide>
+		    <Slide  bgImage={images.radon1} tab="Radonspærre 400"></Slide>
 		    <Slide  bgImage={images.radon2} tab="Tilbehør 400"></Slide>
 		    <Slide  bgImage={images.radon3} tab="Radonmembran SBS"></Slide>
 		    <Slide  bgImage={images.radon4} tab="Tilbehør SBS"></Slide>

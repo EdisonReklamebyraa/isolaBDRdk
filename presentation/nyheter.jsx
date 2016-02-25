@@ -56,14 +56,14 @@ preloader([images.undertage, images.shingel ,images.radon, images.vegogklima, im
                       updatedSlide={this.updatedSlide.bind(this)}                      
 		                  transitionDuration={1000}>
 
-				      <Slide bgImage={images.undertage } tickerText="Her kommer undertage nyhed" />
-				      <Slide bgImage={images.shingel } tickerText="Her kommer shingel nyhed" />
-				      <Slide bgImage={images.radon } tickerText="Her kommer radon nyhed" />
-				      <Slide bgImage={images.vegogklima } tickerText="Her kommer væg og klima nyhed" />
-				      <Slide bgImage={images.tapeogkleb } tickerText="Her kommer tape og klæb nyhed" />
-				      <Slide bgImage={images.tagpap } tickerText="Her kommer tagpap nyhed" />
-				      <Slide bgImage={images.gronnetak } tickerText="Her kommer grønne tage nyhed" />
-				      <Slide bgImage={images.platon } tickerText="Her kommer Platon nyhed" />
+				      <Slide bgImage={images.undertage } tickerText="Undertage til alle tagkonstruktioner!" />
+				      <Slide bgImage={images.shingel } tickerText="Bedst i test!" />
+				      <Slide bgImage={images.radon } tickerText="Til nybyggeri og eksisterende boliger!" />
+				      <Slide bgImage={images.vegogklima } tickerText="Garanteret tæt og fugtsikkert byggeri!" />
+				      <Slide bgImage={images.tapeogkleb } tickerText="Enkelt og sikker at bygge lufttætte og energieffektive konstruktioner!" />
+				      <Slide bgImage={images.tagpap } tickerText="Produceres i Norge til nordiske forhold!" />
+				      <Slide bgImage={images.gronnetak } tickerText="Optager, fordamper og forsinker regnvand!" />
+				      <Slide bgImage={images.platon } tickerText="Sikker fugtbeskyttelse af grundmur, tørv- og græstag!" />
 
                 </Deck>
             </div>
