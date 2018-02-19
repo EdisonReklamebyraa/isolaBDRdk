@@ -14,16 +14,11 @@ const images = {
     undertage2: require("./undertage/IsolaTyvekSuproGrid_2.jpg"),
     undertage3: require("./undertage/IsolaTyvekPro_3.jpg"),
 	undertage4: require("./undertage/isostark.jpg")
-
-
 };
 
 preloader([images.undertage1, images.undertage2, images.undertage3]);
 
-
 class Master extends React.Component {
-
-
     render() {
 	return (
 	    <div>

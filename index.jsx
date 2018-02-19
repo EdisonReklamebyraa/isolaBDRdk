@@ -10,6 +10,8 @@ import Alt from "alt";
 import Flux from "./src/flux/alt";
 
 import Menu from "./presentation/menu";
+import VideoWall from "./presentation/VideoWall";
+
 import Images from "./presentation/images";
 
 import nyheter from "./presentation/nyheter";
@@ -21,6 +23,7 @@ import veggogklimasystem from "./presentation/veggogklimasystem";
 import undertage from "./presentation/undertage";
 import gronnetak from "./presentation/gronnetak";
 import tagpap from "./presentation/tagpap";
+import video from "./presentation/video";
 
 import innovasjon from "./presentation/innovasjon";
 
@@ -30,7 +33,7 @@ import config from "./presentation/config";
 require("normalize.css");
 require("./themes/default/index.css");
 require("highlight.js/styles/monokai_sublime.css");
-require("./themes/default/fonts.css"); 
+require("./themes/default/fonts.css");
 
 
 const flux = new Flux();
@@ -39,7 +42,7 @@ Alt.debug("flux", flux);
 
 
 function wrap(c){
-    return context(c, {styles: config.theme, print: config.print, flux}); 
+    return context(c, {styles: config.theme, print: config.print, flux});
 }
 
 class OuterMostParentComponent extends React.Component {
@@ -47,29 +50,25 @@ class OuterMostParentComponent extends React.Component {
         return (
             <Router history={new BrowserHistory()}>
                 <Route path="/" component={wrap(Menu)} />
-
                 <Route path="/images/:slide" component={wrap(Images)} />
-
+                <Route path="/videos" component={wrap(VideoWall)} />
                 <Route path="/:slide" component={wrap(nyheter)} />
-		        
 		        <Route path="/platonxtra/:slide" component={wrap(platonxtra)} />
-
 		        <Route path="/radonsikring/:slide" component={wrap(radonsikring)} />
 		        <Route path="/tapeogkleb/:slide" component={wrap(tapeogkleb)} />
 		        <Route path="/veggogklimasystem/:slide" component={wrap(veggogklimasystem)} />
 		        <Route path="/undertage/:slide" component={wrap(undertage)} />
 		        <Route path="/gronnetak/:slide" component={wrap(gronnetak)} />
 		        <Route path="/tagpap/:slide" component={wrap(tagpap)} />
-		        
                 <Route path="/innovasjon/:slide" component={wrap(innovasjon)} />
+                <Route path="/videos/:slide" component={wrap(video)} />
+
+
             </Router>
         );
     }
-    
 }
 
-
-
-React.render(( 
+React.render((
     <OuterMostParentComponent />
 ), document.body);
