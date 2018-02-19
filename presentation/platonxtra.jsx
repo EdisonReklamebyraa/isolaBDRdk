@@ -28,7 +28,7 @@ class Master extends React.Component {
 
 		<Deck transition={[ "fade"]} progress="tabs" base="/platonxtra/" transitionDuration={800}>
 		    <Slide  bgImage={images.platon1} tab="Grundmur"></Slide>
-		    <Slide  bgImage={images.platon2} tab="Torvtag"></Slide>
+		    <Slide  bgImage={images.platon2} tab="Tørvtag"></Slide>
 		</Deck>
 	    </div>
 	);
