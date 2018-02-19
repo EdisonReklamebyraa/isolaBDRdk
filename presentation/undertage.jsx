@@ -12,7 +12,9 @@ import Interactive from "./interactive";
 const images = {
     undertage1: require("./undertage/isokraftSBS_1.jpg"),
     undertage2: require("./undertage/IsolaTyvekSuproGrid_2.jpg"),
-    undertage3: require("./undertage/IsolaTyvekPro_3.jpg")
+    undertage3: require("./undertage/IsolaTyvekPro_3.jpg"),
+	undertage4: require("./undertage/isostark.jpg")
+
 
 };
 
@@ -31,6 +33,8 @@ class Master extends React.Component {
 		    <Slide  bgImage={images.undertage1} tab="Isola Isokraft SBS"></Slide>
 		    <Slide  bgImage={images.undertage2} tab="Isola Tyvek Supro Grid"></Slide>
 		    <Slide  bgImage={images.undertage3} tab="Isola Tyvek Pro"></Slide>
+		    <Slide  bgImage={images.undertage4} tab="Isola Isostærk"></Slide>
+
 		</Deck>
 	    </div>
 	);
