@@ -27,6 +27,8 @@ const links = [
     {x:1600, y:160, link:"/veggogklimasystem/0"},
     {x:1600, y:490, link:"/platonxtra/0"},
 
+    {x:270, y:810, link:"/videos"},
+
 
 ];
 

@@ -15,12 +15,12 @@ const images = {
 
 const links = [
     {x:270, y:160, link:"/videos/0"},
-    {x:270, y:490, link:"/videos/1"},
-    {x:710, y:160, link:"/videos/2"},
-    {x:710, y:490, link:"/videos/3"},
-    {x:1160, y:160, link:"/videos/4"},
-    {x:1160, y:490, link:"/videos/5"},
-    {x:1600, y:160, link:"/videos/6"},
+    {x:715, y:160, link:"/videos/1"},
+    {x:1168, y:160, link:"/videos/2"},
+    {x:1614, y:160, link:"/videos/3"},
+    {x:270, y:490, link:"/videos/4"},
+    {x:715, y:490, link:"/videos/5"},
+    {x:1168, y:490, link:"/videos/6"},
 ];
 
 preloader([images.oversikt]);
@@ -31,7 +31,7 @@ class Menu extends React.Component {
     render() {
         return (
             <Links className="clickable" links={links} >
-                <Link className="backLink" href="/0"> </Link>
+                <Link className="backLink" href="/"> </Link>
                 <Deck  progress="none" base="/" >
                     <Slide  bgImage={images.oversikt}>
                     </Slide>
